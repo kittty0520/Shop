@@ -5,7 +5,6 @@ const AuthContext = createContext();
 
 export function AuthContextProvider({ children }) {
 	const [user, setUser] = useState();
-	console.log(user);
 	useEffect(() => {
 		onUserStateChange((user) => {
 			setUser(user);

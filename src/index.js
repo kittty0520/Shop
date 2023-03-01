@@ -24,15 +24,16 @@ const router = createBrowserRouter([
 		errorElement: <NotFound />,
 		children: [
 			{ index: true, path: '/', element: <Home /> },
-			{ path: '/:sort', element: <SortedProducts /> },
-			// { path: '/woman', element: <Woman /> },
-			// { path: '/man', element: <Man /> },
-			// { path: '/beauty', element: <Beauty /> },
-			// { path: '/kids', element: <Kids /> },
-			{ path: '/:sort/:category', element: <CategoryProducts /> },
+			{
+				path: '/products/:sort',
+				element: <SortedProducts />,
+				children: [
+					{ path: '/products/:sort/:category', element: <CategoryProducts /> },
+				],
+			},
 			{ path: '/products/:id', element: <ProductDetail /> },
-			{ path: '/product/new', element: <NewProduct /> },
-			{ path: '/product/cart', element: <MyCart /> },
+			{ path: '/products/new', element: <NewProduct /> },
+			{ path: '/cart', element: <MyCart /> },
 		],
 	},
 ]);
