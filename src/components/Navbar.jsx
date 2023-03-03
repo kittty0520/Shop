@@ -18,16 +18,16 @@ export default function Navbar() {
 			<nav className='flex justify-between items-center basis-3/4'>
 				<ul className='flex gap-8 font-semibold'>
 					<li>
-						<Link to='/products/woman'>Woman</Link>
+						<Link to='/category/woman'>Woman</Link>
 					</li>
 					<li>
-						<Link to='/products/man'>Man</Link>
+						<Link to='/category/man'>Man</Link>
 					</li>
 					<li>
-						<Link to='/products/beauty'>Beauty</Link>
+						<Link to='/category/beauty'>Beauty</Link>
 					</li>
 					<li>
-						<Link to='/products/kids'>Kids</Link>
+						<Link to='/category/kids'>Kids</Link>
 					</li>
 				</ul>
 				<div className='flex items-center gap-2'>

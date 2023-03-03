@@ -1,7 +1,16 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
+import { useLocation, useParams } from 'react-router-dom';
+import CategorizedProducts from '../components/CategorizedProducts';
 
 export default function CategoryProducts() {
 	const { category } = useParams();
-	return <div>{category}</div>;
+	const {
+		state: { state: sort },
+	} = useLocation();
+	console.log(sort);
+	return (
+		<section className='p-4'>
+			<CategorizedProducts sort={sort} filter={category} />
+		</section>
+	);
 }

@@ -6,16 +6,12 @@ import reportWebVitals from './reportWebVitals';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import NotFound from './pages/NotFound';
 import Home from './pages/Home';
-import AllProducts from './pages/AllProducts';
 import SortedProducts from './pages/SortedProducts';
 import CategoryProducts from './pages/CategoryProducts';
 import ProductDetail from './pages/ProductDetail';
 import NewProduct from './pages/NewProduct';
 import MyCart from './pages/MyCart';
-import Woman from './pages/Woman';
-import Man from './pages/Man';
-import Beauty from './pages/Beauty';
-import Kids from './pages/Kids';
+import AllProducts from './pages/AllProducts';
 
 const router = createBrowserRouter([
 	{
@@ -25,10 +21,11 @@ const router = createBrowserRouter([
 		children: [
 			{ index: true, path: '/', element: <Home /> },
 			{
-				path: '/products/:sort',
+				path: '/category/:sort',
 				element: <SortedProducts />,
 				children: [
-					{ path: '/products/:sort/:category', element: <CategoryProducts /> },
+					{ index: true, path: '/category/:sort', element: <AllProducts /> },
+					{ path: '/category/:sort/:category', element: <CategoryProducts /> },
 				],
 			},
 			{ path: '/products/:id', element: <ProductDetail /> },
