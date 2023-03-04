@@ -8,7 +8,7 @@ export default function AllProducts() {
 	const { sort } = useParams();
 	const category = ['outer', 'top', 'bottom', 'bag', 'acc'];
 	return (
-		<section className='flex flex-col gap-8'>
+		<section className='flex flex-col gap-8 w-full'>
 			<EventBanner />
 			<div className='flex flex-col gap-2'>
 				<h2 className='w-full my-4 text-2xl font-semi'>Coupon</h2>
