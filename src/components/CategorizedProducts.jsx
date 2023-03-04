@@ -20,7 +20,9 @@ export default function CategorizedProducts({ filter, sort }) {
 					FilteredProducts.map((product) => (
 						<ProductCard key={product.id} product={product} />
 					))}
-				{FilteredProducts.length === 0 && <p>😓상품을 준비중입니다.</p>}
+				{FilteredProducts && FilteredProducts.length === 0 && (
+					<p>😓상품을 준비중입니다.</p>
+				)}
 			</ul>
 		</div>
 	);

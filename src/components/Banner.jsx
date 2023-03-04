@@ -14,7 +14,7 @@ export default function Banner() {
 		autoplaySpeed: 5000,
 	};
 	return (
-		<div className='absolute left-0 w-full'>
+		<div className='absolute left-0 w-full mt-6'>
 			<Slider {...settings}>
 				<div>
 					<div className='w-full h-96 overflow-hidden flex items-center justify-between relative bg-red-300'>
@@ -32,7 +32,7 @@ export default function Banner() {
 							alt='banner01'
 							className='w-96 hidden md:block'
 						/>
-						<span className='absolute bottom-1 left-2'>
+						<span className='absolute bottom-1 left-2 text-gray-400 text-sm'>
 							사진:{' '}
 							<a href='https://unsplash.com/ko/%EC%82%AC%EC%A7%84/6Uar_aOhCGc?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText'>
 								Unsplash
@@ -60,7 +60,7 @@ export default function Banner() {
 							alt='banner02'
 							className='w-96 hidden md:block'
 						/>
-						<span className='absolute bottom-1 left-2'>
+						<span className='absolute bottom-1 left-2 text-gray-400 text-sm'>
 							사진:{' '}
 							<a href='https://unsplash.com/ko/%EC%82%AC%EC%A7%84/g06TCxFrSWc?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText'>
 								Unsplash
@@ -88,7 +88,7 @@ export default function Banner() {
 							alt='banner03'
 							className='w-96 hidden md:block'
 						/>
-						<span className='absolute bottom-1 left-2'>
+						<span className='absolute bottom-1 left-2 text-gray-400 text-sm'>
 							사진:{' '}
 							<a href='https://unsplash.com/ko/%EC%82%AC%EC%A7%84/JPe8YBHs2Wo?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText'>
 								Unsplash

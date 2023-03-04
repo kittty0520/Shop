@@ -8,6 +8,7 @@ export default function useCarts() {
 	const cartsQuery = useQuery(['carts', uid || ''], () => getCarts(uid), {
 		enabled: !!uid, // !!연산자는 undefined,'',0일 경우 결과를 false로 반환한다.
 	});
+	console.log(uid);
 
 	const addOrUpdateItem = useMutation(
 		(product) => addOrUpdateToCart(uid, product),

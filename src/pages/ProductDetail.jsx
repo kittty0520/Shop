@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import Button from '../components/ui/Button';
 import { BsChevronRight } from 'react-icons/bs';
-import { addOrUpdateToCart } from '../api/firebase';
+import useCarts from '../hooks/useCarts';
 
 export default function ProductDetail() {
 	const {
@@ -12,12 +12,13 @@ export default function ProductDetail() {
 	} = useLocation();
 	const [selected, setSeleted] = useState(size && size[0]);
 	const [success, setSuccess] = useState();
+	const { addOrUpdateItem } = useCarts();
 	const handleSelect = (e) => {
 		setSeleted(e.target.value);
 	};
 	const handleClick = (e) => {
 		const product = { id, image, title, price, option: selected, quantity: 1 };
-		addOrUpdateToCart.mutate(product, {
+		addOrUpdateItem.mutate(product, {
 			onSuccess: () => {
 				setSuccess('✔제품이 장바구니에 추가되었습니다.');
 				setTimeout(() => setSuccess(null), 3000);
