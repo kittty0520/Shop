@@ -65,16 +65,7 @@
                     { path: '/category/:sort/:category', element: <CategoryProducts /> },
                 ],
             },
-            { path: '/products/:id', element: <ProductDetail /> },
-            { path: '/products/new', element: <NewProduct /> },
-            {
-                path: '/cart',
-                element: (
-                    <ProtectedRoute>
-                        <MyCart />
-                    </ProtectedRoute>
-                ),
-            },
+            //이하 생략...
         ],
     },
 
