@@ -45,10 +45,45 @@
 2. useParams 메서드가 undefined을 반환하는 문제
 
 - ✔해결 :
+
   - useParams으로 가져올 변수 이름과 리액트 라우터 주소의 경로 이름을 동일하게 함
   - 동일한 경로에 여러가지 변수를 설정하여 의도하지 않은 component가 표시됨. 따라서 아래와 같이 수정하였다.
-  - 아쉬운 점 : 쿼리스트링을 사용했다면 useParams을 사용하지 않고 더 단순한 라우터 주소 경로를 만들수 있었을 것 같다.
-    <br/>
+
+    ```javascript
+
+    {
+        path: '/',
+        element: <App />,
+        errorElement: <NotFound />,
+        children: [
+            { index: true, path: '/', element: <Home /> },
+            {
+                path: '/category/:sort',
+                element: <SortedProducts />,
+                children: [
+                    { index: true, path: '/category/:sort', element: <AllProducts /> },
+                    { path: '/category/:sort/:category', element: <CategoryProducts /> },
+                ],
+            },
+            { path: '/products/:id', element: <ProductDetail /> },
+            { path: '/products/new', element: <NewProduct /> },
+            {
+                path: '/cart',
+                element: (
+                    <ProtectedRoute>
+                        <MyCart />
+                    </ProtectedRoute>
+                ),
+            },
+        ],
+    },
+
+    ```
+
+  - 아쉬운 점 :
+    - 쿼리스트링을 사용했다면 useParams을 사용하지 않고 더 단순한 라우터 주소 경로를 만들수 있었을 것 같다.
+    - woman, man, ...에 해당하는 페이지를 별도로 구성하고 그에 해당하는 자식 경로와 페이지를 각각 만들어야 하는지에 대해 고민되었으나 그렇게 되면 너무나도 많은 페이지를 만들어야 했기 때문에 위와 같이 구성하였다.
+      <br/>
 
 3. useMutation을 사용할 때 두개의 매개변수를 배열안에 두면서 생긴 문제
 
@@ -68,4 +103,12 @@
 ## 추가하고 싶은 기능
 
 - 즐겨찾기 기능
+
   - productCard에 하트버튼을 추가하여, 클릭하면 firebase에 업로드하고 별도의 페이지에 표시되도록 함(Cart와 유사한 방식)
+
+- 반응형으로 구현
+  - navbar와 aside를 어떻게 처리할 것인지 생각하지 못함
+
+```
+
+```
