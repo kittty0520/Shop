@@ -1,70 +1,49 @@
-# Getting Started with Create React App
+## shop for you
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+---
 
-## Available Scripts
+##index
 
-In the project directory, you can run:
+1.[계획의도](#계획의도)  
+2.[기술스택](#기술스택)  
+3.[기능](#기능)  
+4.[발생했던 문제 및 아쉬운 부분](#발생했던-문제-및-아쉬운-부분)  
+5.[추가하고 싶은 기능](#추가하고-싶은-기능)
 
-### `npm start`
+## 계획의도
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+드림코딩의 쇼핑몰만들기 프로젝트를 클론코딩한 후 저만의 쇼핑몰로 커스텀하기 위해 해당 프로젝트를 제작하였습니다.
 
-### `npm test`
+제품을 남성, 여성, 아이, 뷰티로 나누어 각 세션에서 보여주는 것에 초점을 맞추었습니다.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 기술스택
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<img src="https://img.shields.io/badge/html5-E34F26?style=for-the-badge&logo=html5&logoColor=white">
+<img src="https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">
+<img src="https://img.shields.io/badge/react-61DAFB?style=for-the-badge&logo=react&logoColor=black"><br/>
+<img src="https://img.shields.io/badge/firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=white">
+<img src="https://img.shields.io/badge/Tailwind CSS-06B6D4?style=for-the-badge&logo=Tailwind CSS&logoColor=white"/>
+<img src="https://img.shields.io/badge/github-181717?style=for-the-badge&logo=github&logoColor=white">
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 기능
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+#####여성, 남성, 아이, 뷰티로 나누어 페이지를 보여주기 -리액트 라우터를 이용하여 #####구글 아이디로 로그인하기
+-firebase의 Authentication -로그인 상태에서만 장바구니 아이콘과 유저의 프로필 이미지를 표시 #####제품 추가하기 -로그인시 firebase의 realtime database에 저장된 권리자의 UserId를 확인하여,
+권리자만이 database에 제품을 추가할 수 있도록 함 #####장바구니에 제품을 추가, 수정, 삭제하기
+-firebase의 realtime database에 로그인 상태의 UserId 객체를 추가하여 제품 정보를 업로드함
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 발생했던 문제 및 아쉬운 부분
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+1.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 추가하고 싶은 기능
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
