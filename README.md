@@ -1,6 +1,10 @@
 ## shop for you
 
+
+
 ## 📃index
+
+
 
 1.[계획의도](#계획의도)  
 2.[기술스택](#기술스택)  
@@ -8,15 +12,21 @@
 4.[발생했던 문제 및 아쉬운 부분](#발생했던-문제-및-아쉬운-부분)  
 5.[추가하고 싶은 기능](#추가하고-싶은-기능)
 
+
+
 ## 🎯계획의도
 
 드림코딩의 쇼핑몰만들기 프로젝트를 클론코딩한 후 저만의 쇼핑몰로 커스텀하기 위해 해당 프로젝트를 제작하였습니다.
 
 제품을 남성, 여성, 아이, 뷰티로 나누어 각 세션에서 보여주는 것에 초점을 맞추었습니다.
 
+
+
 ## ✨기술스택
 
 <img src="https://img.shields.io/badge/html5-E34F26?style=for-the-badge&logo=html5&logoColor=white"> <img src="https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"> <img src="https://img.shields.io/badge/react-61DAFB?style=for-the-badge&logo=react&logoColor=black"> <img src="https://img.shields.io/badge/firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=white"> <img src="https://img.shields.io/badge/Tailwind CSS-06B6D4?style=for-the-badge&logo=Tailwind CSS&logoColor=white"/> <img src="https://img.shields.io/badge/github-181717?style=for-the-badge&logo=github&logoColor=white">
+
+
 
 ## 💻기능
 
@@ -36,6 +46,8 @@
 
 - 장바구니에 제품을 추가, 수정, 삭제하기
   - firebase의 realtime database에 로그인 상태의 UserId 객체를 추가하여 제품 정보를 업로드함
+
+
 
 ## 📌발생했던 문제 및 아쉬운 부분
 
@@ -92,6 +104,8 @@
 5. woman페이지에서 man페이지로 이동할때 종종 NotFound페이지가 뜨는 문제
 
 - ❗원인을 찾지 못하여 해결 못함
+
+
 
 ## 추가하고 싶은 기능
 
