@@ -22,7 +22,9 @@
 
 - 여성, 남성, 아이, 뷰티로 나누어 페이지를 보여주기
   - 리액트 라우터를 이용
-
+  ![React-App-router](https://user-images.githubusercontent.com/105909450/223049389-b2aa2e8c-dd06-402f-9434-f689a895cd2b.gif)
+  
+  
 * 구글 아이디로 로그인하기
   - firebase의 Authentication
   - 로그인 상태에서만 장바구니 아이콘과 유저의 프로필 이미지를 표시
