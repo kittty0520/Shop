@@ -109,7 +109,19 @@
 
 - ❗원인을 찾지 못하여 해결 못함
 
-
+6. Link를 통해 state를 전달했을 때, 받아온 state가 undefined으로 반환되는 문제   
+- ✔해결 : state의 객체 구조를 파악하지 못했기 때문에 발생하였다.   
+  ```javascript
+//Link가 위치한 컴포넌트 내부
+const { sort } = useParams();
+return
+<Link to='outer' state={{ state: sort }}>
+  
+// state를 받아 사용할 컴포넌트 내부 
+const {
+		state: { state: sort },
+	} = useLocation();
+  ```
 
 ## 추가하고 싶은 기능
 
