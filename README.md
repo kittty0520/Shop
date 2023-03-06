@@ -37,15 +37,17 @@
   
 * 구글 아이디로 로그인하기
   - firebase의 Authentication
-  - 로그인 상태에서만 장바구니 아이콘과 유저의 프로필 이미지를 표시
-
+  - 로그인 상태에서만 장바구니 아이콘과 유저의 프로필 이미지를 표시   
+  ![Google_Login](https://user-images.githubusercontent.com/105909450/223061643-1f15b32a-9102-4c45-b68a-be5585acba63.gif)
+  
 - 제품 추가하기
-
   - 로그인시 firebase의 realtime database에 저장된 권리자의 UserId를 확인하여, 권리자만이 database에 제품을 추가할 수 있도록 함
     <br/>
 
 - 장바구니에 제품을 추가, 수정, 삭제하기
-  - firebase의 realtime database에 로그인 상태의 UserId 객체를 추가하여 제품 정보를 업로드함
+  - firebase의 realtime database에 로그인 상태의 UserId 객체를 추가하여 제품 정보를 업로드함   
+  ![cart_upload](https://user-images.githubusercontent.com/105909450/223061491-690641fd-b152-46cc-88c5-0f1a786acbc7.gif)
+
 
 
 
