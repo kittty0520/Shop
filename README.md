@@ -42,11 +42,13 @@
   
 - 제품 추가하기
   - 로그인시 firebase의 realtime database에 저장된 권리자의 UserId를 확인하여, 권리자만이 database에 제품을 추가할 수 있도록 함
+   ![product_upload](https://user-images.githubusercontent.com/105909450/223063964-d54553ce-4bb2-4bd7-97df-4868d63917f8.gif)
     <br/>
 
 - 장바구니에 제품을 추가, 수정, 삭제하기
   - firebase의 realtime database에 로그인 상태의 UserId 객체를 추가하여 제품 정보를 업로드함   
   ![cart_upload](https://user-images.githubusercontent.com/105909450/223061491-690641fd-b152-46cc-88c5-0f1a786acbc7.gif)
+
 
 
 
