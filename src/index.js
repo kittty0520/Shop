@@ -14,37 +14,40 @@ import MyCart from './pages/MyCart';
 import AllProducts from './pages/AllProducts';
 import ProtectedRoute from './pages/ProtectedRoute';
 
-const router = createBrowserRouter([
-	{
-		path: '/',
-		element: <App />,
-		errorElement: <NotFound />,
-		children: [
-			{ index: true, path: '/', element: <Home /> },
-			{
-				path: '/category/:sort',
-				element: <SortedProducts />,
-				children: [
-					{ index: true, path: '/category/:sort', element: <AllProducts /> },
-					{
-						path: '/category/:sort/:category',
-						element: <CategoryProducts />,
-					},
-				],
-			},
-			{ path: '/products/:id', element: <ProductDetail /> },
-			{ path: '/products/new', element: <NewProduct /> },
-			{
-				path: '/cart',
-				element: (
-					<ProtectedRoute>
-						<MyCart />
-					</ProtectedRoute>
-				),
-			},
-		],
-	},
-]);
+const router = createBrowserRouter(
+	[
+		{
+			path: '/',
+			element: <App />,
+			errorElement: <NotFound />,
+			children: [
+				{ index: true, path: '/', element: <Home /> },
+				{
+					path: '/category/:sort',
+					element: <SortedProducts />,
+					children: [
+						{ index: true, path: '/category/:sort', element: <AllProducts /> },
+						{
+							path: '/category/:sort/:category',
+							element: <CategoryProducts />,
+						},
+					],
+				},
+				{ path: '/products/:id', element: <ProductDetail /> },
+				{ path: '/products/new', element: <NewProduct /> },
+				{
+					path: '/cart',
+					element: (
+						<ProtectedRoute>
+							<MyCart />
+						</ProtectedRoute>
+					),
+				},
+			],
+		},
+	],
+	{ basename: process.env.REACT_APP_PUBLIC_URL }
+);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
