@@ -4,6 +4,38 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Slide from './Slide';
 
+function CustumNextArrow(props) {
+	const { className, style, onClick } = props;
+	return (
+		<div
+			className={(className, 'before:text-white', 'before:text-4xl')}
+			style={{
+				...style,
+				display: 'block',
+				background: 'transparent',
+				right: '20px',
+			}}
+			onClick={onClick}
+		/>
+	);
+}
+
+function CustumPrevArrow(props) {
+	const { className, style, onClick } = props;
+	return (
+		<div
+			className={(className, 'before:text-white', 'before:text-4xl')}
+			style={{
+				...style,
+				display: 'block',
+				background: 'transparent',
+				left: '20px',
+				zIndex: 50,
+			}}
+			onClick={onClick}
+		/>
+	);
+}
 export default function Banner() {
 	const settings = {
 		dots: true,
@@ -13,6 +45,9 @@ export default function Banner() {
 		slidesToScroll: 1,
 		autoplay: true,
 		autoplaySpeed: 5000,
+		pauseOnHover: true,
+		prevArrow: <CustumPrevArrow />,
+		nextArrow: <CustumNextArrow />,
 	};
 	return (
 		<div className='absolute left-0 w-full mt-6'>
