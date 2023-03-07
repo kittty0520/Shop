@@ -8,6 +8,8 @@ import {
 } from 'firebase/auth';
 import { get, getDatabase, ref, remove, set } from 'firebase/database';
 import { v4 as uuid } from 'uuid';
+import dotenv from 'dotenv';
+dotenv.config();
 
 const firebaseConfig = {
 	apiKey: process.env.REACT_APP_FIREBASE_API,
