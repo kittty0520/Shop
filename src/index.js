@@ -16,11 +16,11 @@ import ProtectedRoute from './pages/ProtectedRoute';
 
 const router = createBrowserRouter([
 	{
-		path: '/',
+		path: '/Shop',
 		element: <App />,
 		errorElement: <NotFound />,
 		children: [
-			{ index: true, path: '/', element: <Home /> },
+			{ index: true, path: '/Shop', element: <Home /> },
 			{
 				path: '/category/:sort',
 				element: <SortedProducts />,
