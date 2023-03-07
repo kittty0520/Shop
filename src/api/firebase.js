@@ -10,16 +10,16 @@ import { get, getDatabase, ref, remove, set } from 'firebase/database';
 import { v4 as uuid } from 'uuid';
 
 const firebaseConfig = {
-	apiKey: process.env.REACT_APP_FIREBASE_API,
+	apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
 	authDomain: process.env.REACT_APP_FIREBASE_AUTH_DAMAIN,
 	databaseURL: process.env.REACT_APP_FIREBASE_DB_URL,
 	projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
 };
 
 const app = initializeApp(firebaseConfig);
-const auth = getAuth();
-const provider = new GoogleAuthProvider();
 const db = getDatabase(app);
+const auth = getAuth(app);
+const provider = new GoogleAuthProvider();
 
 export function login() {
 	provider.setCustomParameters({
