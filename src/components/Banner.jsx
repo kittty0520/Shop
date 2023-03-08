@@ -79,6 +79,7 @@ export default function Banner() {
 						title={'RED DRESSOR'}
 						imgPath={'banner01.jpg'}
 						photographer={'Tide_trasher_x'}
+						bannerPath={'category/woman'}
 					/>
 				</div>
 				<div className='bg-stone-400'>
@@ -86,6 +87,7 @@ export default function Banner() {
 						title={'WHITE DRESSOR'}
 						imgPath={'banner02.jpg'}
 						photographer={'Isabela Drasovean'}
+						bannerPath={'category/woman'}
 					/>
 				</div>
 				<div className='bg-zinc-400'>
@@ -93,6 +95,7 @@ export default function Banner() {
 						title={'MAN SUITE'}
 						imgPath={'banner03.jpg'}
 						photographer={'Anis Salkic'}
+						bannerPath={'category/man'}
 					/>
 				</div>
 			</Slider>

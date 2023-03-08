@@ -16,7 +16,7 @@ export default function Navbar() {
 				</h1>
 			</Link>
 			<nav className='flex justify-between items-center basis-3/4'>
-				<ul className='flex gap-8 font-semibold'>
+				<ul className='flex gap-3 md:gap-8 font-semibold'>
 					<li>
 						<Link to='/category/woman'>Woman</Link>
 					</li>
