@@ -3,14 +3,12 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Slide from './Slide';
-
+import { AiOutlineArrowLeft, AiOutlineArrowRight } from 'react-icons/ai';
 function CustumNextArrow(props) {
 	const { className, style, onClick } = props;
 	return (
 		<div
-			className={
-				(className, 'before:text-opacity-0', 'before:text-white', 'text-4xl')
-			}
+			className={className}
 			style={{
 				...style,
 				display: 'block',
@@ -18,7 +16,9 @@ function CustumNextArrow(props) {
 				right: '20px',
 			}}
 			onClick={onClick}
-		/>
+		>
+			<AiOutlineArrowRight className='relative -top-4 text-white text-3xl' />
+		</div>
 	);
 }
 
@@ -26,21 +26,18 @@ function CustumPrevArrow(props) {
 	const { className, style, onClick } = props;
 	return (
 		<div
-			className={
-				(className,
-				'before:text-opacity-0',
-				'before:text-white',
-				'before:text-4xl')
-			}
+			className={className}
 			style={{
 				...style,
 				display: 'block',
 				background: 'transparent',
 				left: '20px',
-				zIndex: 50,
+				zIndex: 10,
 			}}
 			onClick={onClick}
-		/>
+		>
+			<AiOutlineArrowLeft className='relative -top-4 text-white text-3xl' />
+		</div>
 	);
 }
 
