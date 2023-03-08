@@ -8,7 +8,9 @@ function CustumNextArrow(props) {
 	const { className, style, onClick } = props;
 	return (
 		<div
-			className={(className, 'before:text-white', 'before:text-4xl')}
+			className={
+				(className, 'before:text-opacity-0', 'before:text-white', 'text-4xl')
+			}
 			style={{
 				...style,
 				display: 'block',
@@ -24,7 +26,12 @@ function CustumPrevArrow(props) {
 	const { className, style, onClick } = props;
 	return (
 		<div
-			className={(className, 'before:text-white', 'before:text-4xl')}
+			className={
+				(className,
+				'before:text-opacity-0',
+				'before:text-white',
+				'before:text-4xl')
+			}
 			style={{
 				...style,
 				display: 'block',
