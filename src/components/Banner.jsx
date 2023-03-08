@@ -43,6 +43,7 @@ function CustumPrevArrow(props) {
 		/>
 	);
 }
+
 export default function Banner() {
 	const settings = {
 		dots: true,
@@ -55,6 +56,23 @@ export default function Banner() {
 		pauseOnHover: true,
 		prevArrow: <CustumPrevArrow />,
 		nextArrow: <CustumNextArrow />,
+		appendDots: (dots) => (
+			<div
+				style={{
+					backgroundColor: 'transparent',
+					position: 'absolute',
+					bottom: '25px',
+					display: 'block',
+					width: '100%',
+					padding: 0,
+					margin: 0,
+					listStyle: 'none',
+					textAlign: 'center',
+				}}
+			>
+				<ul> {dots} </ul>
+			</div>
+		),
 	};
 	return (
 		<div className='absolute left-0 w-full mt-6'>
