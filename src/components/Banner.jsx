@@ -8,7 +8,7 @@ function CustumNextArrow(props) {
 	const { className, style, onClick } = props;
 	return (
 		<div
-			className={(className, 'before:text-opacity-0')}
+			className={`before:text-transparent ${className} `}
 			style={{
 				...style,
 				display: 'block',
@@ -17,7 +17,7 @@ function CustumNextArrow(props) {
 			}}
 			onClick={onClick}
 		>
-			<AiOutlineArrowRight className='relative -top-6 text-white text-3xl' />
+			<AiOutlineArrowRight className='relative -top-4 text-white text-3xl' />
 		</div>
 	);
 }
@@ -26,7 +26,7 @@ function CustumPrevArrow(props) {
 	const { className, style, onClick } = props;
 	return (
 		<div
-			className={(className, 'before:text-opacity-0')}
+			className={`before:text-transparent ${className} `}
 			style={{
 				...style,
 				display: 'block',
@@ -36,7 +36,7 @@ function CustumPrevArrow(props) {
 			}}
 			onClick={onClick}
 		>
-			<AiOutlineArrowLeft className='relative -top-6 text-white text-3xl' />
+			<AiOutlineArrowLeft className='relative -top-4 text-white text-3xl' />
 		</div>
 	);
 }
