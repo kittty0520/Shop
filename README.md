@@ -32,20 +32,20 @@
 
 - 제품 추가하기
 
-  - 로그인시 firebase의 realtime database에 저장된 권리자의 UserId를 확인하여, 권리자만이 database에 제품을 추가할 수 있도록 함
+  - 로그인시 firebase의 realtime database에 저장된 권리자의 UserId를 확인하여, 권리자만이 database에 제품을 추가할 수 있도록 하였다.
     ![product_upload](https://user-images.githubusercontent.com/105909450/223063964-d54553ce-4bb2-4bd7-97df-4868d63917f8.gif)
     <br/>
 
 - 장바구니에 제품을 추가, 수정, 삭제하기
-  - firebase의 realtime database에 로그인 상태의 UserId 객체를 추가하여 제품 정보를 업로드함  
-     ![cart_upload](https://user-images.githubusercontent.com/105909450/223061491-690641fd-b152-46cc-88c5-0f1a786acbc7.gif)
+  - firebase의 realtime database에 로그인 상태의 UserId 객체를 추가하여 제품 정보를 업로드하였다.
+    ![cart_upload](https://user-images.githubusercontent.com/105909450/223061491-690641fd-b152-46cc-88c5-0f1a786acbc7.gif)
     <br/>
 
 ## 📌발생했던 문제 및 아쉬운 부분
 
 1. firebase의 realtime database를 시작할 때 초기 세팅을 잘못하여 제품 정보를 업로드하지 못함
 
-- ✔해결 : test모드로 설정하여 별도의 접근권한을 필요하지 않도록 함
+- ✔해결 : test모드로 설정하여 별도의 접근권한을 필요하지 않도록 하였다.
   <br/>
 
 2. useParams 메서드가 undefined을 반환하는 문제
@@ -91,13 +91,19 @@
 
 4. Slick Slider의 왼쪽 Arrow가 보이지 않는 문제
 
-- ✔해결 : slick slider를 커스텀하기 위해서 module폴더에 있는 slick slider CSS파일에서 수정하였고, 해당 클래스에 z-index를 추가하여 가장 상위에 보이도록 하였다.
-- ❗아쉬운 점 : 왜 왼쪽만 보이지 않았는지에 대해 원인을 찾지 못하였다.
-  <br/>
+- ✔해결 :
+
+  - slick slider를 커스텀하기 위해서 module폴더에 있는 slick slider CSS파일에서 수정하였고, 해당 클래스에 z-index를 추가하여 가장 상위에 보이도록 하였다.
+  - 배포할때는 내가 수정한 css가 아니라 서버에 등록된 CSS 파일을 가져오기때문에 커스텀한 Arrow 컴포넌트를 만들었다.
+
+- ❗아쉬운 점 :
+  - 왜 왼쪽만 보이지 않았는지에 대해 원인을 찾지 못하였다.
+  - ::before 영역을 수정하지 못해서 index.css에서 해당 가상클래스를 직접 수정하였다.
+    <br/>
 
 5. woman페이지에서 man페이지로 이동할때 종종 NotFound페이지가 뜨는 문제
 
-- ❗원인을 찾지 못하여 해결 못함
+- ❗원인을 찾지 못하여 해결 못하였다.
   <br/>
 
 6. Link를 통해 state를 전달했을 때, 받아온 state가 undefined으로 반환되는 문제
@@ -115,14 +121,18 @@
   } = useLocation();
   ```
 
+7. gh-pages 라이브러리를 통한 배포 실패
+
+- ✔해결 : ApiKey와 같은 키들은 git에 추가되지 않도록 별도의 파일에 저장해 두었기 때문에 배포할 때 반영되지 않는다. 따라서 Nelify에서 배포하기로 하였고, 해당 값들은 환경변수로 입력하여 노출되지 않고 반영되도록 하였다.
+
   <br/>
 
 ## 추가하고 싶은 기능
 
 - 즐겨찾기 기능
 
-  - productCard에 하트버튼을 추가하여, 클릭하면 firebase에 업로드하고 별도의 페이지에 표시되도록 함(Cart와 유사한 방식)
+  - productCard에 하트버튼을 추가하여, 클릭하면 firebase에 업로드하고 별도의 페이지에 표시되도록 하였다.(Cart와 유사한 방식)
     <br/>
 
 - 반응형으로 구현
-  - navbar와 aside를 어떻게 처리할 것인지 생각하지 못함
+  - navbar와 aside를 어떻게 처리할 것인지 생각하지 못하였다.
