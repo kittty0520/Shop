@@ -12,9 +12,9 @@ export default function Coupon({ per, description }) {
 					<p className='text-sm'>{description}</p>
 				</div>
 				<div className='w-20 h-48 bg-gray-800  rounded-l-2xl flex items-center justify-center'>
-					<span className='border border-dashed py-2 px-4 cursor-pointer -rotate-90 rounded-sm'>
+					<button className='border border-dashed py-2 px-4 cursor-pointer -rotate-90 rounded-sm'>
 						DOWNLOAD
-					</span>
+					</button>
 				</div>
 			</div>
 		</>
